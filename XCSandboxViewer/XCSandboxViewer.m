@@ -40,7 +40,7 @@
     if (!_davServer) {
         NSString * homePath = NSHomeDirectory();
         _davServer  = [[GCDWebDAVServer alloc] initWithUploadDirectory:homePath];
-        [GCDWebDAVServer setLogLevel:3];
+        [GCDWebDAVServer setLogLevel:5];
     }
     return _davServer;
 }
