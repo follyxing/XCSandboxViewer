@@ -8,6 +8,7 @@
 
 #import "XCSandboxViewer.h"
 #import "GCDWebDAVServer.h"
+#import "GCDWebServer.h"
 @interface  XCSandboxViewer()
 @property(nonatomic,strong) GCDWebDAVServer * davServer;
 @end
@@ -26,14 +27,21 @@
     [self startWithPort:8888];
 }
 -(void)startWithPort:(NSUInteger)port{
-    NSString * homePath = NSHomeDirectory();
-    self.davServer = [[GCDWebDAVServer alloc] initWithUploadDirectory:homePath];
     [self.davServer startWithPort:port bonjourName:@"XCSandboxViewer"];
-    NSLog(@"Visit %@ in your WebDAV client", _davServer.serverURL);
+    NSLog(@"\n 🐳 Visit %@ in your WebDAV client 🐳 \n", _davServer.serverURL);
 }
 -(void)stop{
     if (self.davServer) {
         [self.davServer stop];
     }
+}
+
+-(GCDWebDAVServer *)davServer{
+    if (!_davServer) {
+        NSString * homePath = NSHomeDirectory();
+        _davServer  = [[GCDWebDAVServer alloc] initWithUploadDirectory:homePath];
+        [GCDWebDAVServer setLogLevel:3];
+    }
+    return _davServer;
 }
 @end
