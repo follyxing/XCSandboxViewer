@@ -10,12 +10,11 @@ iOS真机沙盒查看器 !<b>像正常在Finder中操作文件一样 </b>，增�
 ### Podfile
 ```
 platform :ios, '7.0'
-pod 'XCSandboxViewer'
+pod 'XCSandboxViewer', :git => 'https://github.com/follyxing/XCSandboxViewer.git', :tag => '0.1.1'
 
 ```
 
 ```
-pod update
 pod install
 ```
 
