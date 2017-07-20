@@ -9,12 +9,19 @@ iOS sandbox viewer in  the real phone ! iOS真机沙盒查看器 !
 ```
 platform :ios, '7.0'
 pod 'XCSandboxViewer'
+
+```
+
+```
+pod update
+pod install
 ```
 
 ## Usage
 
-1. In AppDelegate.m   application:didFinishLaunchingWithOptions: start viewer .
+1. Start viewer .
 
+>In AppDelegate.m   application:didFinishLaunchingWithOptions:
 ```    
 #ifdef DEBUG
     [[XCSandboxViewer shareViewer] start];
@@ -24,10 +31,13 @@ pod 'XCSandboxViewer'
 2.Run App 
 
 
-3.open "Finder" ， press [ ⌘ + K ] , enter URL .
+3.Open "Finder" ， press [ ⌘ + K ] , enter URL .
 
+<img src="Screenshot/1.png" width=400px/>
+<img src="Screenshot/2.png" width=400px/>
+<img src="Screenshot/3.png" width=400px/>
 
-3.enjoy!
+4.Enjoy!
 
 
 
