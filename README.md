@@ -35,7 +35,7 @@ pod install
 3.Open "Finder" ， press [ ⌘ + K ] , enter URL .
 
 <img src="Screenshot/1.png" width=400px/>
-<img src="Screenshot/2.png" width=400px/>
+<img src="Screenshot/2.1.png" width=400px/>
 <img src="Screenshot/3.png" width=400px/>
 
 4.Enjoy!
