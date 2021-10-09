@@ -1,7 +1,7 @@
 # XCSandboxViewer
-iOS sandbox viewer in  the real phone ! 
+iOS sandbox viewer .
 
-iOS真机沙盒查看器 !<b>像正常在Finder中操作文件一样 </b>，增删文件。
+iOS真机沙盒查看器 !<b>在Finder中操作、查看文件 </b>。
 
 ## Installation
 
@@ -9,7 +9,6 @@ iOS真机沙盒查看器 !<b>像正常在Finder中操作文件一样 </b>，增�
 
 ### Podfile
 ```
-platform :ios, '7.0'
 pod 'XCSandboxViewer'
 
 ```
